@@ -1,5 +1,5 @@
-const { GraphQLString, GraphQLObjectType, GraphQLNonNull } = require('graphql');
-const mongoose = require('mongoose');
+import { GraphQLString, GraphQLObjectType, GraphQLNonNull } from 'graphql';
+import mongoose from 'mongoose';
 
 // const Author = require('../../models/Author');
 // const AuthorType = require('./AuthorType');
@@ -20,4 +20,4 @@ const Profile = new GraphQLObjectType({
     })
 });
 
-module.exports = Profile
+export default Profile

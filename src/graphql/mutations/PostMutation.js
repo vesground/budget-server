@@ -88,4 +88,4 @@ const deletePost = {
     }
 }
 
-module.exports = {createPost, updatePost, deletePost}
+export default {createPost, updatePost, deletePost}

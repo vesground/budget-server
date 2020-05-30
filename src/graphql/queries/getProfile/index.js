@@ -1,9 +1,9 @@
-const { GraphQLList } = require('graphql');
+import { GraphQLList } from 'graphql';
 
 const AuthorType = require('./AuthorType');
 const resolver = require('./resolver');
 
-module.exports = {
+export default {
     type: new GraphQLList(AuthorType),
     description: "List of all Authors",
     resolver

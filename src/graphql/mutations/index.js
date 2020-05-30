@@ -1,7 +1,7 @@
 var { addAuthor, updateAuthor, deleteAuthor } = require('./AuthorMutation');
 var { createPost, updatePost, deletePost} = require('./PostMutation')
 
-module.exports = {
+export default {
     addAuthor,
     updateAuthor,
     deleteAuthor,

@@ -1,13 +1,14 @@
-const { GraphQLObjectType,GraphQLSchema } = require('graphql');
-const mutation = require('./graphql/mutations/index')
-const BlogQueryRootType = require('./graphql/queries/index')
+import { GraphQLObjectType,GraphQLSchema } from 'graphql';
 
-const BlogAppSchema = new GraphQLSchema({
-   query: BlogQueryRootType,
+import mutation from './graphql/mutations/index';
+import query from './graphql/queries/index';
+
+const Schema = new GraphQLSchema({
+   query,
    mutation: new GraphQLObjectType({
        name: 'Mutation',
        fields: mutation
    })
 });
 
-module.exports = BlogAppSchema;
+export default Schema;

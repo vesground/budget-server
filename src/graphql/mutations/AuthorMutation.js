@@ -73,4 +73,4 @@ const deleteAuthor = {
       return deleteAuthor
     }
 }
-module.exports = {addAuthor, updateAuthor, deleteAuthor}
+export default {addAuthor, updateAuthor, deleteAuthor}

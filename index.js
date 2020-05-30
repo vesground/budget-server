@@ -1,7 +1,7 @@
 const express = require('express');
 const graphQLHttp = require('express-graphql');
 const schema = require('./src/schema');
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 const database = require('./config/database');
 const port = 3000;
 

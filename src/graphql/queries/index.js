@@ -1,8 +1,8 @@
-const { GraphQLObjectType } = require('graphql');
+import { GraphQLObjectType } from 'graphql';
 
-const getProfile = require('./getProfile');
+import getProfile from './getProfile';
 
-const BlogQueryRootType = new GraphQLObjectType ({
+const Query = new GraphQLObjectType ({
     name: 'BlogAppSchema',
     description: "Blog Application Schema Query Root",
     fields: () => ({
@@ -10,4 +10,4 @@ const BlogQueryRootType = new GraphQLObjectType ({
     })
 });
 
-module.exports = BlogQueryRootType
+export default Query;
