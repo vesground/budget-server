@@ -1,9 +1,9 @@
 import { GraphQLList } from 'graphql';
 
-import ProfileType from 'graphql/types/Profile.js';
+import AccountType from 'graphql/types/Account.js';
 import resolver from './resolver';
 
 export default {
-    type: ProfileType,
+    type: AccountType,
     resolver
 },
