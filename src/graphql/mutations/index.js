@@ -1,11 +1,5 @@
-var { addAuthor, updateAuthor, deleteAuthor } = require('./AuthorMutation');
-var { createPost, updatePost, deletePost} = require('./PostMutation')
+import createProfile from 'graphql/mutations/createProfile';
 
 export default {
-    addAuthor,
-    updateAuthor,
-    deleteAuthor,
-    createPost,
-    updatePost,
-    deletePost
+    createProfile
 }

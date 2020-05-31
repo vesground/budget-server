@@ -5,6 +5,7 @@ const schema = new Schema({
   id: { type: Schema.Types.ObjectId, required: true, unique: true },
   author: { type: Schema.Types.ObjectId, required: true, unique: true },
   category: { type: Schema.Types.ObjectId, required: true, unique: true },
+  amount: { type: Schema.Types.Int, required: true },
   description: String,
   created_at: { type: Date, required: true },
   updated_at: { type: Date, required: true },
