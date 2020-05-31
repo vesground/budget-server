@@ -3,10 +3,10 @@ import CategoryType from 'graphql/types/Category.js';
 import input from './input';
 import resolver from './resolver';
 
-const createCategory = {
+const deleteCategory = {
     type: CategoryType,
     args: input,
     resolve: resolver
 }
 
-export default createCategory;
+export default deleteCategory;

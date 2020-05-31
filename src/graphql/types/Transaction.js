@@ -1,4 +1,4 @@
-import { GraphQLString, GraphQLObjectType, GraphQLNonNull } from 'graphql';
+import { GraphQLString, GraphQLInt, GraphQLObjectType, GraphQLNonNull } from 'graphql';
 import mongoose from 'mongoose';
 
 import TimestampType from 'graphql/types/scalars.js';
