@@ -7,7 +7,9 @@ const schema = new Schema({
   first_name: String,
   last_name: String,
   password: String,
-  photo_url: String
+  photo_url: String,
+  created_at: { type: Date, required: true },
+  updated_at: { type: Date, required: true },
 });
 
 const Profile = mongoose.model('Profile', schema);

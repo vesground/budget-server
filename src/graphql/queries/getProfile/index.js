@@ -1,5 +1,3 @@
-import { GraphQLList } from 'graphql';
-
 import ProfileType from 'graphql/types/Profile.js';
 import resolver from './resolver';
 

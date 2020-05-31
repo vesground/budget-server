@@ -6,8 +6,7 @@ import listTransactions from 'graphql/queries/listTransactions';
 import listCategories from 'graphql/queries/listCategories';
 
 const Query = new GraphQLObjectType ({
-    name: 'BlogAppSchema',
-    description: "Blog Application Schema Query Root",
+    name: 'Query',
     fields: () => ({
         getAccount,
         getProfile,

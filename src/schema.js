@@ -1,14 +1,8 @@
 import { GraphQLObjectType,GraphQLSchema } from 'graphql';
 
-import mutation from './graphql/mutations/index';
-import query from './graphql/queries/index';
+import mutation from 'graphql/mutations';
+import query from 'graphql/querys';
 
-const Schema = new GraphQLSchema({
-   query,
-   mutation: new GraphQLObjectType({
-       name: 'Mutation',
-       fields: mutation
-   })
-});
+const Schema = new GraphQLSchema({ query, mutation });
 
 export default Schema;
