@@ -1,6 +1,6 @@
 import Transaction from 'models/Transaction.js';
 
-export async function (args) {
+async function resolver(args) {
   try {
     const transactions = await Transaction.find({}).exec();
     console.log('list transactions', JSON.stringify(transactions));
@@ -9,3 +9,5 @@ export async function (args) {
     throw new Error(error);
   }
 }
+
+export default resolver;

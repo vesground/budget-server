@@ -1,6 +1,6 @@
 import Account from 'models/Account.js';
 
-export async function (args) {
+async function resolver(args) {
   try {
     const account = await Account.findById(args?.id).exec();
     console.log('get account', JSON.stringify(account));
@@ -9,3 +9,5 @@ export async function (args) {
     throw new Error(error);
   }
 }
+
+export default resolver;

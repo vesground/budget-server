@@ -1,6 +1,6 @@
 import Category from 'models/Category.js';
 
-export async function (args) {
+async function resolver(args) {
   try {
     const categories = await Category.find({}).exec();
     console.log('list categories', JSON.stringify(categories));
@@ -9,3 +9,5 @@ export async function (args) {
     throw new Error(error);
   }
 }
+
+export default resolver;

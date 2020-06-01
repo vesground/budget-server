@@ -4,8 +4,19 @@
       "root": ["./src"],
       "alias": {
         "test": "./test",
+        "src": "./src",
+        "config": "./config",
         "underscore": "lodash"
       }
     }]
+  ],
+  "presets": [
+    ["@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
   ]
 }

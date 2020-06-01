@@ -1,12 +1,12 @@
-const express = require('express');
-const graphQLHttp = require('express-graphql');
-const schema = require('./src/schema');
+import express from 'express';
+import graphQLHttp from 'express-graphql';
+import schema from 'src/schema';
 import mongoose from 'mongoose';
-const database = require('./config/database');
+import database from 'config/database';
 const port = 3000;
 
 mongoose.Promise = global.Promise;
-mongoose.connect(database.mongoConnectionString,{ useNewUrlParser: true },(err) => {
+mongoose.connect(database.mongoConnectionString, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },(err) => {
     if(err) {
         console.log(err);
     } else {

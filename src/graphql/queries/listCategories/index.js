@@ -4,6 +4,6 @@ import CategoryType from 'graphql/types/Category.js';
 import resolver from './resolver';
 
 export default {
-    type: new GraphQLList(CategoryType),
-    resolver
-},
+  type: new GraphQLList(CategoryType),
+  resolver
+};

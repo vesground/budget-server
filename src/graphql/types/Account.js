@@ -2,7 +2,7 @@ import { GraphQLString, GraphQLObjectType, GraphQLNonNull, GraphQLList } from 'g
 import mongoose from 'mongoose';
 
 import TimestampType from 'graphql/types/scalars.js';
-import TransactionType from 'graphql/types/TransactionType.js';
+import TransactionType from 'graphql/types/Transaction.js';
 import ProfileType from 'graphql/types/Profile.js';
 
 const ownerResolver = async (args) => {
@@ -14,7 +14,7 @@ const Account = new GraphQLObjectType({
     name: 'Account',
     fields: () => ({
         id: { type: new GraphQLNonNull(GraphQLString) },
-        owner: { type: ProfileType, resolve: authorResolver },
+        owner: { type: ProfileType, resolve: ownerResolver },
         contributors: { type: new GraphQLList(ProfileType) },
         transactions: { type: new GraphQLList(TransactionType) },
         created_at: { type: TimestampType },

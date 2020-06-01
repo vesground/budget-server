@@ -1,6 +1,6 @@
 import Profile from 'models/Profile.js';
 
-export async function (args) {
+async function resolver(args) {
   try {
     const profile = await Profile.findById(args?.id).exec();
     console.log('get profile', JSON.stringify(profile));
@@ -8,4 +8,6 @@ export async function (args) {
   } catch (error) {
     throw new Error(error);
   }
-}
+};
+
+export default resolver;
