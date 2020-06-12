@@ -16,10 +16,21 @@ mongoose.connect(database.mongoConnectionString, { useNewUrlParser: true, useUni
 
 const app = express();
 
-app.use('/', graphQLHttp({
+app.use(
+  '/graphql',
+  graphQLHttp({
     schema: schema,
     graphiql: true
-}));
+  }),
+);
+// app.use('/graphql', graphQLHttp(async (request, response, graphQLParams) => {
+//   console.log('request', request);
+//   return {
+//     schema: schema,
+//     graphiql: true
+//       // rootValue: await someFunctionToGetRootValue(request),
+//   }}
+// ));
 
 app.listen(port, () => {
     console.log('server running at port', port)

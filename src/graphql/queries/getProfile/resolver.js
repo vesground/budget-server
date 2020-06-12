@@ -2,6 +2,7 @@ import Profile from 'models/Profile.js';
 
 async function resolver(args) {
   try {
+    console.log('resolver', args);
     const profile = await Profile.findById(args?.id).exec();
     console.log('get profile', JSON.stringify(profile));
     return profile;

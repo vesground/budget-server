@@ -6,7 +6,7 @@ import listTransactions from 'graphql/queries/listTransactions';
 import listCategories from 'graphql/queries/listCategories';
 
 const Query = new GraphQLObjectType ({
-    name: 'Query',
+    name: 'RootQueryType',
     fields: () => ({
         getAccount,
         getProfile,

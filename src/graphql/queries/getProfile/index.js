@@ -3,5 +3,9 @@ import resolver from './resolver';
 
 export default {
   type: ProfileType,
-  resolver
+  resolve() {
+    console.log('get profile resolver');
+    return {};
+  }
+  // resolver
 };
