@@ -6,11 +6,9 @@ const schema = new Schema({
   email: String,
   first_name: String,
   last_name: String,
-  password: String,
+  // password: String,
   photo_url: String,
-  created_at: { type: Date, required: true },
-  updated_at: { type: Date, required: true },
-});
+}, { timestamps: true });
 
 const Profile = mongoose.model('Profile', schema);
 
