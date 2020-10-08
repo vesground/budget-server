@@ -1,0 +1,4 @@
+export const CONTRIBUTORS_ROLES = {
+    OWNER: 'OWNER',
+    CONTRIBUTOR: 'CONTRIBUTOR',
+}

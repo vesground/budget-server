@@ -14,7 +14,7 @@ const Account = new GraphQLObjectType({
     name: 'Account',
     fields: () => ({
         id: { type: new GraphQLNonNull(GraphQLString) },
-        owner: { type: ProfileType, resolve: ownerResolver },
+        // owner: { type: ProfileType, resolve: ownerResolver },
         contributors: { type: new GraphQLList(ProfileType) },
         transactions: { type: new GraphQLList(TransactionType) },
         created_at: { type: TimestampType },
